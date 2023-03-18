@@ -1,7 +1,7 @@
 import re
 
 
-VERSION_PATTERN = re.compile(r"\"appVersion\": \"(.+)\"\n")
+VERSION_PATTERN = re.compile(r"appVersion: \"(.+)\"[\n]*")
 
 
 def get_file_content(file_path: str) -> str:
@@ -17,19 +17,15 @@ def set_file_content(file_path: str, content: str) -> None:
 
 
 
-def search_ver(ver: str) -> str:
-    match = VERSION_PATTERN.search(ver)
-
-    if match:
-        return match.group(1)
-
-
-def replace_ver(text: str, new_ver: str) -> str:
+def replace_ver(text: str, new_ver: str) -> str | None:
     match = VERSION_PATTERN.search(text)
+
     if match:
         return re.sub(
             VERSION_PATTERN,
-            f'"appVersion": "{new_ver}"\n',
+            f'appVersion: "{new_ver}"\n',
             text,
             count=1
         )
+
+    return None
