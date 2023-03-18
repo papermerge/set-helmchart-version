@@ -1,3 +1,5 @@
+import os
+
 from setappversion.utils import (
     get_file_content,
     set_file_content,

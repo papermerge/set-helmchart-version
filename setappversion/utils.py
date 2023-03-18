@@ -11,13 +11,13 @@ def get_file_content(file_path: str) -> str:
     return content
 
 
-def set_file_content(file_path: str, content: str) -> None:
+def set_file_content(file_path: str, content: str):
     with open(file_path, "w") as file:
         file.write(content)
 
 
 
-def replace_ver(text: str, new_ver: str) -> str | None:
+def replace_ver(text: str, new_ver: str) -> str:
     match = VERSION_PATTERN.search(text)
 
     if match:
