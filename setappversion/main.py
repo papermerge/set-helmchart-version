@@ -15,7 +15,7 @@ def main():
 
     content = get_file_content(file_path)
     new_content = replace_ver(content, str(new_version))
-    set_file_content(file_path, new_version)
+    set_file_content(file_path, new_content)
 
 
 if __name__ == "__main__":
