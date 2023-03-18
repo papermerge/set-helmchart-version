@@ -2,7 +2,7 @@ name: "Set appVersion for helmchart file"
 description: "Sets given version number to appVersion attribute of the helmchart file"
 author: "Eugen Ciur <eugen@papermerge.com>"
 inputs:
-  input_file:
+  helmchart_file:
     description: "Path to helmchart file e.g. charts/docs/Chart.yaml"
   new_app_version:
     description: "new version for appVersion attribute"
