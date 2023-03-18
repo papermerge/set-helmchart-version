@@ -24,6 +24,6 @@ jobs:
       - name: Set new appVersion in docs helmchart
         uses: papermerge/set-helmchart-version@master
         with:
-          input_file: "charts/docs/Chart.yaml"
+          helmchart_file: "charts/docs/Chart.yaml"
           new_app_version: "1.5.20"
 ```
