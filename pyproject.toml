@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "setappversion"
+version = "0.1.0"
+description = "Sets new appVersion in helmchart file"
+authors = ["Eugen Ciur <eugen@papermerge.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
